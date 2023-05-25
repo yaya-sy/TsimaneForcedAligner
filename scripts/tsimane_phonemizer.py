@@ -1,5 +1,5 @@
 """
-authors: Angele and Alex. LSCP.
+authors: Angele, Alex Cristia, William N. Havard, Yaya SY. LSCP.
 
 Script for phonemizing tsimane text.
 Note however that this is a phonemizer, not a phonetizer.
@@ -163,8 +163,6 @@ def phonemize(mapping_table, utterance, spread=True):
 
     if not nl:
         return ''
-    ### results...      
-    # new_a=str(nl[-1:])[2:-2] # we only keep the last step for a word (the form with all the replacements done); and we remove the parentheses and quotation marks
     new_l = nl[-1]
     ### replacement of = --> ə͂
     if re.search("=",new_l):
@@ -185,20 +183,12 @@ def phonemize(mapping_table, utterance, spread=True):
     return unicodedata.normalize("NFC", new_l)
 
 def post_process(phonemized: str):
-    # phonemized = re.sub("\ꞌ", " ʔ ", phonemized)
     phonemized = re.sub("ɨ ̃", "ɨ̃", phonemized)
-    # phonemized = re.sub("ɨ ̃́", " ɨ̃ ", phonemized)
-    # phonemized = re.sub("ĩ́", " ɨ̃ ", phonemized)
-    # phonemized = re.sub("õ ́", " õ ", phonemized)
-    # phonemized = re.sub("ã ́", " õ ", phonemized)
-    # phonemized = re.sub("k ̣", " k ", phonemized)
-    # phonemized = re.sub("ɨ̃ ́", "ɨ̃", phonemized)
     phonemized = re.sub(" ʰ", "ʰ", phonemized)
     phonemized = re.sub(" ʲ", "ʲ", phonemized)
     phonemized = re.sub("ə ͂", "ə͂", phonemized)
     phonemized = re.sub("ẽĩ", "ẽ ĩ", phonemized)
     phonemized = re.sub("ĩĩ", "ĩ ĩ", phonemized)
-    # phonemized = re.sub("ã ̈", "ã", phonemized)
     phonemized = re.sub("t ʃ", "tʃ", phonemized)
     phonemized = re.sub(" ʔ", "ʔ", phonemized)
     return unicodedata.normalize("NFC", phonemized)
@@ -208,7 +198,7 @@ def tokenize_phones(word, phones):
 
 
 def phonemize_folder(folder: Path, mapping_table: dict, output_folder: Path) -> None:
-    """Phonemize all utterances in a given folder"""
+    """Phonemizes all utterances in a given folder"""
     for transcription_file in folder.glob("*.transcription"):
         transcription = next(open(transcription_file))
         transcription = transcription.strip()
@@ -218,6 +208,7 @@ def phonemize_folder(folder: Path, mapping_table: dict, output_folder: Path) -> 
             output_file.write(f"{transcription}\t{phonemized}\n")
 
 def phonemize_file(input_file: str, mapping_table: dict, phones: list, output_folder: Path):
+    """Phonemizes a given file."""
     path_name = Path(input_file).stem
     ignored = 0
     with open(input_file, "r") as opened_file:
