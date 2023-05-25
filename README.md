@@ -28,7 +28,7 @@ conda activate tsimane-scraper
 
 ## Aligning the bible corpus
 
-We release a file containing audio timemarks for each verse of the bible corpus. It's a tab-separated file:
+We release the file `data/timemarks.txt` containing audio timemarks for each verse of the bible corpus. It's a tab-separated file:
 ```
 filename    verse_line_id   onset   offset
 ```
@@ -51,7 +51,7 @@ To align a corpus you need:
 - a _acoustic model_: We release a pretrained acoustic model for aligning a new corpus. This model is pretrained on the bible corpus and is located in `models/all_non_merged_glottal.zip`
 - a _phonetic dictionary_: it's a vocabulary of the language mapping each word to its phonetic realization. You can find a _phonetic dictionary_ created with the bible corpus of Tsimane in `data/vocabularies/bible_vocabulary.dict`. But you can also phonemize your own vocabulary using this script: `scripts/phonemizer.py`
 
-To align your speech corpus, you will need to install the [Montreal Forced Aligner](https://montreal-forced-aligner.readthedocs.io/en/latest/installation.html "Installation instruction for Montreal Forced Aligner").
+To align your speech corpus, you will need to install the [Montreal Forced Aligner](https://montreal-forced-aligner.readthedocs.io/en/latest/installation.html "Installation instructions for Montreal Forced Aligner").
 
 After installation, you can align your corpus:
 ```bash
