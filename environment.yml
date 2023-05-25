@@ -1,0 +1,6 @@
+name: tsimane-scraper
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+prefix: /scratch2/ysy/.conda/envs/tsimane-scraper
