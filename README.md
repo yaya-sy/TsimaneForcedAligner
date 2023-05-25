@@ -5,7 +5,7 @@ A forced aligner for Tsimane language. This repository contains also many intere
 
 Clone this github repository:
 ```bash
-git clone https://github.com/yaya-sy/FulaSpeechCorpora.git
+git clone https://github.com/yaya-sy/TsimaneForcedAligner.git
 ```
 
 and move to it:
