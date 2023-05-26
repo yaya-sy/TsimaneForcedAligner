@@ -8,7 +8,6 @@ authors:
 Script for phonemizing tsimane text.
 """
 from pathlib import Path
-import os
 from argparse import ArgumentParser
 import re
 import unicodedata
@@ -205,17 +204,6 @@ def post_process(phonemized: str):
 def tokenize_phones(word, phones):
     return re.split(rf"({'|'.join(phones)})", word)
 
-
-def phonemize_folder(folder: Path, mapping_table: dict, output_folder: Path) -> None:
-    """Phonemize all utterances in a given folder"""
-    for transcription_file in folder.glob("*.transcription"):
-        transcription = next(open(transcription_file))
-        transcription = transcription.strip()
-        phonemized = phonemize(mapping_table, transcription)
-        phonemized = phonemized.strip()
-        with open(output_folder / f"{transcription_file.stem}.phonemized", "w") as output_file:
-            output_file.write(f"{transcription}\t{phonemized}\n")
-
 def phonemize_file(input_file: str, mapping_table: dict, phones: list, output_folder: Path):
     path_name = Path(input_file).stem
     ignored = 0
@@ -243,8 +231,8 @@ def phonemize_file(input_file: str, mapping_table: dict, phones: list, output_fo
 def main():
     parser = ArgumentParser()
     parser.add_argument("-i", "--input",
-                        help="The folder/file containing utterance files to phonemuze.\
-                              One utterance per file/line.",
+                        help="The file containing words to phonemize.\
+                              One word per line.",
                         required=True)
     parser.add_argument("-m", "--mapping_table",
                         help="The dictionnary associating each grapheme to a phoneme.",
@@ -262,11 +250,7 @@ def main():
     mapping_table = mapping_table_file_to_dictionnary(args.mapping_table)
     with open(args.phones) as phones_file:
         phones = [phone.strip() for phone in phones_file]
-        print(phones)
-    if os.path.isdir(args.input):
-        phonemize_folder(Path(args.input), mapping_table, output_folder)
-    else:
-        phonemize_file(args.input, mapping_table, phones, output_folder)
+    phonemize_file(args.input, mapping_table, phones, output_folder)
 
 if __name__ == "__main__":
     main()
