@@ -1,0 +1,122 @@
+sh	ʃ	C # native consonant, fricative
+ꜱh	ʃ	C # native consonant, fricative, small cap
+ty	tʲ	C # plain stop
+ᴛy	tʲ	C # plain stop, small cap
+dy	dʲ	C # plain stop
+ᴅy	dʲ	C # plain stop, small cap
+qu	k	C # plain stop
+ǫu	k	C # plain stop, small cap
+ny	ɲ	C # nasal stop
+ɴy	ɲ	C # nasal stop, small cap
+†u	kʰ	C # aspirated stop
+q̂u	kʰ	C # aspirated stop, relic of the Spanish orthography: qu = c
+ĝu	kʰ	C # aspirated stop, TYPO
+ĝᴜ	kʰ	C # aspirated stop, TYPO, small cap
+ĉh	tʃ	C # affricate stop
+çh	tʃ	C # affricate stop, inconsistency in the orthographic system
+ts	ts	C # affricate stop
+ᴛs	ts	C # affricate stop, small cap
+tš	tsʰ	C # affricate aspirated stop
+ᴛš	tsʰ	C # affricate aspirated stop, small cap
+tŝ	tsʰ	C # affricate aspirated stop
+ᴛŝ	tsʰ	C # affricate aspirated stop, small cap
+ch	tʃʰ	C # affricate aspirated stop, inconsistency in the orthographic system
+ᴄh	tʃʰ	C # affricate aspirated stop, inconsistency in the orthographic system, small cap
+ɢ	g	C # non-native consonant, small cap
+g	g	C # non-native consonant 
+r	ɾ	C # native consonant
+ꜰ	f	C # native consonant, fricative, small cap 
+f	f	C # native consonant, fricative
+ꜱ	s	C # native consonant, fricative, small cap
+s	s	C # native consonant, fricative
+ᴠ	ʋ	C # native consonant, fricative, small cap
+v	ʋ	C # native consonant, fricative
+ᴍ	m	C # nasal stop, small cap
+m	m	C # nasal stop
+j	h	C #∂ nasal stop
+ɴ	n	C # nasal stop, small cap
+n	n	C # nasal stop
+ñ	ɲ	C # nasal stop
+N	n̪	C # nasal stop, mentioned in Gill's grammar but not in phoible's or other phonological inventories
+T	t̪	C # plain stop, mentioned in Gill's grammar but not in phoible's or other phonological inventories
+D	d̪	C # plain stop, mentioned in Gill's grammar but not in phoible's or other phonological inventories
+'	ʔ	C # plain stop
+ꞌ	ʔ	C # plain stop
+ʔ	ʔ	C # plain stop
+ᴘ	p	C # plain stop, small cap
+p	p	C # plain stop
+ʙ	b	C # plain stop, small cap
+b	b	C # plain stop
+ᴛ	t	C # plain stop, small cap
+t	t	C # plain stop
+ᴅ	d	C # plain stop, small cap
+d	d	C # plain stop
+ᴄ	k	C # plain stop, small cap
+c	k	C # plain stop
+ǫ	k	C # plain stop, TYPO, small cap
+q	k	C # plain stop, TYPO
+ƒ	pʰ	C # aspirated stop
+p̂	pʰ	C # aspirated stop
+ĉ	kʰ	C # aspirated stop
+œ	kʰ	C # aspirated stop
+ç	tʃ	C # affricate stop, TYPO
+c̣h	tʃ	C # affricate stop, TYPO
+ŝ	tsʰ	C # affricate aspirated stop, TYPO
+ᴀ	a	V # small cap
+a	a	V
+á	a	V
+ạ	ã	V
+ặ	ã	V
+×	ã	V
+§	=	V # because of a display problem, replaced later in the script by ə͂
+â	=	V # because of a display problem, replaced later in the script by ə͂
+å	ã	V
+ã	ã	V
+ä	ə	V
+ᴏ	o	V # small cap
+¬	o	V
+þ	o	V
+ó	o	V
+o	o	V
+ọ	õ	V
+õ	õ	V
+ɪ	i	V # small cap
+i	i	V
+ï	i	V
+í	i	V
+î	$	V # because of a display problem, replaced later in the script by ĩ
+ị	$	V # because of a display problem, replaced later in the script by ĩ
+ᴜ	ɨ	V # small cap
+u	ɨ	V
+ú	ɨ	V
+ø	+	V # because of a display problem, replaced later in the script by ɨ̃
+ụ	+	V # because of a display problem, replaced later in the script by ɨ̃
+ý	+	V # because of a display problem, replaced later in the script by ɨ̃
+ᴇ	e	V # small cap
+‰	e	V
+é	e	V
+e	e	V
+ẹ	@	V # because of a display problem, replaced later in the script by ẽ
+ê	@	V # because of a display problem, replaced later in the script by ẽ
+æ	@	V # because of a display problem, replaced later in the script by ẽ
+ʜ	h	C # small cap
+ᴋ	k	C # small cap
+ʟ	l	C # small cap
+ʀ	r	C # small cap
+ᴡ	w	C # small cap
+x	x	C # small cap
+
+ᴢ	z	C # small cap
+
+# The characters below will be treated directly in the script :
+# j | ᴊ --> x in an initial syllable except if we have V+ij --> Vj  # native consonant, fricative
+# y | ʏ --> j (special rule the avoid j --> x # native consonant
+# if the first vowel of a word is nazalized, the others too
+# replacements of the following characters with the right IPA symbol : =, +, $, @
+
+
+# ß	C
+# ʋ	C
+# x	C
+# y	V
+# j	C
